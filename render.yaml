@@ -1,0 +1,11 @@
+services:
+  - type: worker
+    name: telegram-youtube-bot
+    runtime: node
+    buildCommand: |
+      apt-get update && apt-get install -y ffmpeg
+      npm install
+    startCommand: npm start
+    envVars:
+      - key: TELEGRAM_BOT_TOKEN
+        sync: false

@@ -1,0 +1,20 @@
+{
+  "name": "youtube_telegram_bot",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "archiver": "^7.0.1",
+    "dotenv": "^16.5.0",
+    "node-telegram-bot-api": "^0.66.0",
+    "sanitize-filename": "^1.6.3",
+    "youtube-dl-exec": "^3.0.21",
+    "ytdl-core": "^4.11.5"
+  }
+}
