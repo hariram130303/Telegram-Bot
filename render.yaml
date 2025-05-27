@@ -1,11 +1,11 @@
 services:
-  - type: worker
-    name: telegram-youtube-bot
-    runtime: node
-    buildCommand: |
-      apt-get update && apt-get install -y ffmpeg
-      npm install
-    startCommand: npm start
+  - type: web
+    name: telegram-bot
+    env: node
+    plan: free
+    buildCommand: 'npm install'
+    startCommand: 'node bot.js'
+    autoDeploy: true
     envVars:
-      - key: TELEGRAM_BOT_TOKEN
-        sync: false
+      - key: TELEGRAM_TOKEN
+        fromDotEnv: true
